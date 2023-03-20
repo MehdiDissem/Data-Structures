@@ -1,20 +1,28 @@
-class stack {
-    constructo(){
-        this.storage = {}
-        this.size = 0
+class Stack {
+    constructor() {
+      this.storage = {};
+      this.count = 0;
     }
-
-    push(value){
-        this.storage[this.size]=value
-        this.size++
+  
+    push(value) {
+      this.storage[this.count] = value;
+      this.count++;
     }
-    pop(){
-        this.size && this.size--
-        var result = this.storage[this.size]
-        delete this.storagge[this.size]
-        return result 
+  
+    pop() {
+      if (this.count === 0) {
+        return undefined;
+      }
+  
+      this.count--;
+      const result = this.storage[this.count];
+      delete this.storage[this.count];
+      return result;
     }
-    size(){
-        return this.size
+  
+    getSize() {
+      return this.count;
     }
-}
+  }
+  
+  module.exports = Stack;
