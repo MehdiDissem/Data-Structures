@@ -1,0 +1,15 @@
+{
+  "name": "hashtables",
+  "version": "1.0.0",
+  "description": "",
+  "main": "HashTable.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "Mehdi Dissem",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}

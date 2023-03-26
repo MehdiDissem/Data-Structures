@@ -8,7 +8,7 @@
 //     - perform an action if the key is found
 //   - otherwise perform a not-found action
 //////////////////////////////////////////////////////////////////
-
+const {LimitedArray,getIndexBelowMaxForKey} = require("./hashTableHelpers")
 // Define a constructor function HashTable
 var HashTable = function () {
   // Initialize the size of the hash table to 0
@@ -203,6 +203,8 @@ HashTable.prototype._resize = function (newLimit) {
       this.insert(tuple[0], tuple[1])
     }
   }
+
+  module.exports= HashTable
   
   //////////////////////////////////////////////////////////////////
   // uncomment this line to use the HOF version of HashTable
